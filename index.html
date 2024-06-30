@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tetris Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="game-section">
+            <canvas id="gameCanvas" width="125" height="250"></canvas>
+            <div class="mobile-controls">
+                <button id="leftBtn">Left</button>
+                <button id="rotateBtn">Rotate</button>
+                <button id="rightBtn">Right</button>
+                <button id="downBtn">Down</button>
+            </div>
+        </div>
+        <div class="info-section">
+            <div class="score">Score: <span id="score">0</span></div>
+            <div class="next-piece-container">
+                <h3>Next Piece</h3>
+                <canvas id="nextPieceCanvas" width="80" height="80"></canvas>
+            </div>
+            <div class="controls">
+                <button id="startBtn">Start Game</button>
+                <button id="restartBtn" style="display:none;">Restart</button>
+                <button id="pauseBtn" style="display:none;">Pause</button>
+                <label for="levelSelect">Level: <span id="levelDisplay">1</span></label>
+                <select id="levelSelect">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+            </div>
+        </div>
+        <div id="gameOver" style="display:none;">Game Over</div>
+    </div>
+    <script src="Music.js"></script>
+    <script src="speed.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Times+New+Roman:wght@400;700&display=swap');
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(to right, #1e3c72, #2a5298, #3a7bd5, #3a6073);
+    color: #ffffff;
+    font-family: 'Times New Roman', serif;
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+    width: 90%;
+    max-width: 400px;
+    margin: 10px auto;
+}
+
+.game-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 3px solid #61dafb;
+    padding: 5px;
+    border-radius: 10px;
+    background: #1c1f24;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+}
+
+canvas {
+    background: #0d0d0d;
+    border: 2px solid #61dafb;
+    margin-bottom: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.block {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.block div {
+    width: 20px;  /* 调整方块尺寸 */
+    height: 20px; /* 调整方块尺寸 */
+    box-sizing: border-box;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 3px;
+}
+
+.block.cyan div { background: linear-gradient(135deg, #00ffff, #007777); }
+.block.yellow div { background: linear-gradient(135deg, #ffff00, #777700); }
+.block.purple div { background: linear-gradient(135deg, #800080, #550055); }
+.block.blue div { background: linear-gradient(135deg, #0000ff, #000077); }
+.block.orange div { background: linear-gradient(135deg, #ffa500, #775500); }
+.block.green div { background: linear-gradient(135deg, #008000, #005500); }
+.block.red div { background: linear-gradient(135deg, #ff0000, #770000); }
+.block.pink div { background: linear-gradient(135deg, #ff69b4, #c71585); }
+.block.lime div { background: linear-gradient(135deg, #00ff00, #32cd32); }
+.block.teal div { background: linear-gradient(135deg, #008080, #005757); }
+.block.brown div { background: linear-gradient(135deg, #a52a2a, #732a2a); }
+
+.mobile-controls {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 5px;
+}
+
+.mobile-controls button {
+    flex: 1;
+    margin: 0 2px;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(45deg, #ff6b6b, #f06595, #ff8a5c);
+    color: #fff;
+    font-size: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.mobile-controls button:hover {
+    background: linear-gradient(45deg, #f06595, #ff6b6b, #ff8a5c);
+    transform: scale(1.1);
+}
+
+.info-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.score {
+    font-size: 14px;
+    font-family: 'Times New Roman', serif;
+    margin-bottom: 10px;
+    color: #ffdf00;
+}
+
+.next-piece-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+    background: #1c1f24;
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid #61dafb;
+}
+
+.next-piece-container h3 {
+    margin: 0 0 3px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #ffdf00;
+}
+
+#nextPieceCanvas {
+    display: block;
+    margin: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.controls button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(45deg, #ff6b6b, #f06595, #ff8a5c);
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s, background 0.3s;
+    margin-bottom: 3px;
+}
+
+.controls button:hover {
+    background: linear-gradient(45deg, #f06595, #ff6b6b, #ff8a5c);
+    transform: scale(1.1);
+}
+
+.controls label {
+    color: #ffdf00;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 3px;
+}
+
+.controls select {
+    display: none;
+    padding: 3px;
+    border-radius: 5px;
+    background: #1c1f24;
+    color: #fff;
+    border: none;
+    font-size: 14px;
+}
+
+#levelDisplay {
+    color: #ffdf00;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#gameOver {
+    font-size: 18px;
+    color: #ff4c4c;
+    text-shadow: 0 0 5px #ff0000;
+    margin-top: 10px;
+}
